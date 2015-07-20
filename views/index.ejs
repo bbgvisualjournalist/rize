@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include partials/template/head.ejs %>
+</head>
+<body>
+<% include partials/template/menu.ejs %>
+
+<% include partials/template/header.ejs %>
+
+<div id='navigation'>
+</div><!-- navigation -->
+
+<div id='container'>
+
+
+	<%if (data[0].video!=''){ %>
+	<video width="100%" controls poster="images/fpo.jpg">
+		<source src="video/<%= data[0].video %>" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<%} else {%>
+	<iframe id ='video' width="640" height="360" src="<%= data[0].youtube %>" frameborder="0" allowfullscreen></iframe>
+	<% } %>
+
+
+
+	<div id='mission' class='section'>
+		<h3 style=''>Our mission</h3>
+		<%- description %>
+	</div><!--mission-->
+
+
+
+	<div id='followUs' class='section clearALl'>
+		<h3>Follow us</h3>
+		<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='<%= socialData[i].platform %>'><img src='images/transparentSquare.png' class='square'/></a><% } %><% } %>
+	</div><!--socialIcons-->
+
+
+
+	<div id='staff' class='section'>
+		<h3>The team</h3>
+		<% for (var i=0; i<staffData.length; i++){%>
+		<div class='member'>
+			<div class='photo' style='background:#FFF url(images/mugshot_<%= staffData[i].twitter %>.jpg) center center; background-size: cover;'>
+				<img src='images/transparentSquare.png' class='square'/>
+			</div>
+			<div class='profile'>
+				<h4><%= staffData[i].name %></h4>
+				<p class='role'><%= staffData[i].role %>, <a href='http://twitter.com/<%= staffData[i].twitter %>'>@<%= staffData[i].twitter %></a></p>
+				<p class='biography'><%= staffData[i].bio %></p>
+			</div>
+		</div>
+		<% } %>
+	</div><!-- staff -->
+
+
+
+	<div class='section' style='margin-bottom:0;'>
+		<h3 style='margin-bottom:0;'>Where we are</h3>
+	</div>
+	<!--<div id='map_canvas'></div>-->
+	<div id='map-rize' class='map'> </div>
+
+
+</div><!-- container -->
+
+<script>
+	var geojson = [
+		{
+			"type": "FeatureCollection",
+			"features": [
+				<% for (var i = 0; i < mapData.length; i++){ %>
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [<%- mapData[i].coordinates %>]
+					},
+					"properties": {
+						"title": "<%- mapData[i].title %>",
+						"description": "<%- mapData[i].description %>",
+						"marker-color": "#F7941E",
+						"marker-size": "large",
+						"marker-symbol": "building"
+					}
+				}<% if (i < mapData.length - 1){ %>,<% } %>
+				<% } %>
+			]
+		}
+	];
+</script>
+
+<% include partials/template/footer.ejs %>
+<% include partials/template/scripts.ejs %>
+</body>
+</html>

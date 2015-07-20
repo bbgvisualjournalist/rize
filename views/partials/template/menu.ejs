@@ -1,0 +1,39 @@
+<!--
+<div id='menu'>
+	<div id='titleBar'>
+		<h1><a href='/'>
+				<% if (data[0].navtitle!=''){ %>
+				<%- data[0].navtitle %>
+				<% } else { %>
+				<%= data[0].title %>
+				<% } %>
+			</a></h1>
+		<img src='/images/menu.png' />
+	</div>
+	<div class='clearIt'></div>
+	<ul id='dropdown'>
+		<%if (data[0].twitter!=''){ %><a href='https://twitter.com/<%= data[0].twitter %>'><li class='social'>Twitter: @<%- data[0].twitter %></li></a><% } %>
+		<%if (data[0].email!=''){ %><a href="mailto:<%= data[0].email %>"><li class='social'><span class='label'>Email: </span><%- data[0].email %> </li></a><% } %>
+		<%if (data[0].linkedin!=''){ %><a href='https://linkedin.com/in/<%= data[0].linkedin %>/en'><li class='social'>LinkedIn</li></a><% } %>
+		<%if (data[0].github!=''){ %><a href='https://github.com/<%= data[0].github %>/'><li class='social'>Github</li></a><% } %>
+	</ul>
+</div>
+-->
+
+<div id='header' class='clearAll'>
+	<div id='centerWidth'>
+		<div id='titleBar'>
+			<h1><a href=''>
+					<% if (data[0].navtitle!=''){ %>
+					<%- data[0].navtitle %>
+					<% } else { %>
+					<%= data[0].title %>
+					<% } %>
+				</a></h1>
+		</div>
+		<ul class='dropdownCategories right' id='dropdown'>
+			<a href='#mission'><li>Mission</li></a><a href='#followUs'><li>Follow Us</li></a><a href='#staff'><li>Team</li></a>
+		</ul>
+		<a href='#header' id='menuButton'><img src='images/menu.png'/></a>
+	</div><!--centerWidth-->
+</div><!--header-->
