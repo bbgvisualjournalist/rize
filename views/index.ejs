@@ -6,13 +6,8 @@
 <body>
 <% include partials/template/menu.ejs %>
 
-<% include partials/template/header.ejs %>
-
-<div id='navigation'>
-</div><!-- navigation -->
 
 <div id='container'>
-
 
 	<%if (data[0].video!=''){ %>
 	<video width="100%" controls poster="images/fpo.jpg">
@@ -80,7 +75,7 @@
 					},
 					"properties": {
 						"title": "<%- mapData[i].title %>",
-						"description": "<img src='<%= data[0].url %>images/<%= mapData[i].image %>' style='width: 30%; float: left; margin-right: 10px;'/><%= mapData[i].description %>",
+						"description": "<% if (mapData[i].image!=''){ %><img src='<%= data[0].url %>images/<%= mapData[i].image %>' style='width: 30%; float: left; margin-right: 10px;'/><% } %><%= mapData[i].description %>",
 						"marker-color": "<%= mapData[i].markercolor %>",
 						"marker-size": "<%= mapData[i].markersize %>"
 					<% if (mapData[i].markersymbol!=''){ %>,"marker-symbol": "<%= mapData[i].markersymbol %>"<% } %>
