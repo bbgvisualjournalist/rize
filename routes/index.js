@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* Splits data into separate paragraphs*/
 function splitParagraphs(source){
-    console.log('*(*)(*&)(*&)(*&)(*&)(*&)(*&)*(&)(*&)(*&)(*&)(*&)(*&)(*&)(*&)(*&(')
     var splitGraphs = '';
 
     var paragraphs = source;

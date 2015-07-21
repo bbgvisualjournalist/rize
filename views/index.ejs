@@ -80,10 +80,10 @@
 					},
 					"properties": {
 						"title": "<%- mapData[i].title %>",
-						"description": "<%- mapData[i].description %>",
-						"marker-color": "#F7941E",
-						"marker-size": "large",
-						"marker-symbol": "building"
+						"description": "<img src='<%= data[0].url %>images/<%= mapData[i].image %>' style='width: 30%; float: left; margin-right: 10px;'/><%= mapData[i].description %>",
+						"marker-color": "<%= mapData[i].markercolor %>",
+						"marker-size": "<%= mapData[i].markersize %>"
+					<% if (mapData[i].markersymbol!=''){ %>,"marker-symbol": "<%= mapData[i].markersymbol %>"<% } %>
 					}
 				}<% if (i < mapData.length - 1){ %>,<% } %>
 				<% } %>
