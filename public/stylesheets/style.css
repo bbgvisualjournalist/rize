@@ -23,9 +23,8 @@
 
 	.clearAll {clear:both;}
 
-	.container{width:100%; margin:0 auto; padding:0; background-color: #FFF;}
-
-	.container video{margin: 45px 0 0px 0; padding: 0;}
+	#container{width:100%; margin:0 auto; padding:0; background-color: #FFF;}
+    #container iframe#video, #container video{margin: 45px 0 0px 0; padding: 0;}
 	#container h3.insetHeadline{margin-top: 50px; padding-left: 20px; color: #999;}
 
 	.section{width: 90%; margin: 0 5%; padding: 35px 0 0 0;}
