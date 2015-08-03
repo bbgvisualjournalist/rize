@@ -10,7 +10,10 @@
 				</a></h1>
 		</div>
 		<ul class='dropdownCategories right' id='dropdown'>
-			<a href='#video'><li>Mission</li></a><a href='#followUs'><li>Follow Us</li></a><a href='#staff'><li>Team</li></a><a href='#map-rize'><li>Map</li></a>
+			<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='' style=''><li><%=socialData[i].action %></li></a><% } %><% } %>
+
+
+
 		</ul>
 		<a href='#header' id='menuButton'><img src='images/menu.png'/></a>
 	</div><!--centerWidth-->
