@@ -55,6 +55,8 @@ router.get('/', function(req, res, next) {
 
     var url = data[0].url;
     var mission = splitParagraphs(data[0].mission);
+    var map =  splitParagraphs(data[0].map);
+    var strategy = splitParagraphs(data[0].strategy);
 
     //description: splitParagraphs(data[0].biography)
 
@@ -66,7 +68,9 @@ router.get('/', function(req, res, next) {
         pageTitle: data[0].tagline,
         metaImage: data[0].metaimage,
         url: url,
-        description: mission
+        description: mission,
+        map: map,
+        strategy: strategy
     });
 });
 

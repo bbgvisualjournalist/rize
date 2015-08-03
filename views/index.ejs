@@ -17,25 +17,36 @@
 	<%} else {%>
 	<iframe id ='video' width="640" height="360" src="<%= data[0].youtube %>" frameborder="0" allowfullscreen></iframe>
 	<% } %>
+	<div id='group'>
 
 
 
-	<div id='mission' class='section'>
+	<div id='mission' class='section '>
 		<h3 style=''>Our mission</h3>
 		<%- description %>
 	</div><!--mission-->
+	</div>
 
-
+	<div class="clearAll"></div>
 
 	<div id='followUs' class='section clearALl'>
 		<h3>Follow us</h3>
 		<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='<%= socialData[i].platform %>'><img src='images/transparentSquare.png' class='square'/></a><% } %><% } %>
+		<%- strategy %>
+
 	</div><!--socialIcons-->
 
-
+	<div class='section' style='margin-bottom:0;'>
+		<h3 style='margin-bottom:0;'>The team</h3>
+	</div>
+	<!--<div id='map_canvas'></div>-->
+	<div id='map-rize' class='map'> </div>
+	<div class='section mapDescription'>
+		<%- map %>
+	</div>
 
 	<div id='staff' class='section'>
-		<h3>The team</h3>
+		<!--<h3>The team</h3>-->
 		<% for (var i=0; i<staffData.length; i++){%>
 		<div class='member'>
 			<div class='photo' style='background:#FFF url(images/mugshot_<%= staffData[i].twitter %>.jpg) center center; background-size: cover;'>
@@ -52,11 +63,6 @@
 
 
 
-	<div class='section' style='margin-bottom:0;'>
-		<h3 style='margin-bottom:0;'>Where we are</h3>
-	</div>
-	<!--<div id='map_canvas'></div>-->
-	<div id='map-rize' class='map'> </div>
 
 
 </div><!-- container -->
