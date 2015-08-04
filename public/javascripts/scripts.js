@@ -2,84 +2,7 @@ $(document).ready( function() {
     //Create maps
     L.mapbox.accessToken = 'pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw';
 
-    /*
-    var geojson = [
-        {
-            "type": "FeatureCollection",
-            "features": [
-                {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -77.016556,
-                            38.887226
-                        ]
-                    },
-                    "properties": {
-                        "title": "Africa Rizing HQ",
-                        "description": "description could go here.",
-                        "marker-color": "#F7941E",
-                        "marker-size": "large",
-                        "marker-symbol": "building"
-                    }
-                },
 
-                {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -0.200000,
-                            5.550000
-                        ]
-                    },
-                    "properties": {
-                        "title": "Adam Martin (<a href='http://twitter.com/'>@adamjmartin</a>) — Accra, Ghana",
-                        "description": "<img src='http://54.243.239.169/brian/africa.rizing/images/mugshot_adamjmartin.jpg' style='width: 30%; float: left; margin-right: 10px; '> #BOS #DCA #ACC Tweets on #beisbol #media #tech dir. of tech & innovation @BBGInnovate former #pubmedia @NPRTechTeam and @NPRNews always RadioBoston dot Com",
-                        "marker-color": "#FBB040",
-                        "marker-size": "large"
-                    }
-                },
-
-                {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -17.366029,
-                            14.764504
-                        ]
-                    },
-                    "properties": {
-                        "title": "Mel Bailey (<a href='twitter.com/'>@MelB4freePress</a>) — Dakar, Senegal",
-                        "description": "<img src='http://54.243.239.169/brian/africa.rizing/images/mugshot_melb4freepress.jpg' style='width: 30%; float: left; margin-right: 10px;'> Digital Media Specialist @VOA_News in #Dakar Formerly @NBCNews, @NYU Alumna mes tweets n'engage que moi ",
-                        "marker-color": "#FBB040",
-                        "marker-size": "large"
-                    }
-                },
-
-                {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            3.379206,
-                            6.524379
-                        ]
-                    },
-                    "properties": {
-                        "title": "Victoria Okoye (<a href='http://twitter.com/'>@victoria_okoye</a>) — Lagos, Nigeria",
-                        "description": "<img src='http://54.243.239.169/brian/africa.rizing/images/mugshot_victoria_okoye.jpg' style='width: 30%; float: left; margin-right: 10px ''>Dreamer, writer, urban planner, @WIEGOGlobal urban advocate. Tweeting #urban development, #design, #publicspaces, #streetculture, etc. Carl Jung fan.",
-                        "marker-color": "#FBB040",
-                        "marker-size": "large"
-                    }
-                }
-            ]
-        }
-
-    ];
-    */
 
     //Create the map.
     var map = L.mapbox.map('map-rize', 'visualjournalist.mnbadlih', {
@@ -96,9 +19,9 @@ $(document).ready( function() {
     function disableZoom(){
         // Disable drag and zoom handlers.
         map.dragging.disable();
-        map.touchZoom.disable();
-        map.doubleClickZoom.disable();
-        map.scrollWheelZoom.disable();
+        //map.touchZoom.disable();
+        //map.doubleClickZoom.disable();
+        //map.scrollWheelZoom.disable();
 
         // Disable tap handler, if present.
         if (map.tap) map.tap.disable();
@@ -107,9 +30,9 @@ $(document).ready( function() {
     function enableZoom(){
         // Disable drag and zoom handlers.
         map.dragging.enable();
-        map.touchZoom.enable();
-        map.doubleClickZoom.enable();
-        map.scrollWheelZoom.enable();
+        //map.touchZoom.enable();
+        //map.doubleClickZoom.enable();
+        //map.scrollWheelZoom.enable();
 
         // Disable tap handler, if present.
         if (map.tap) map.tap.enable();
