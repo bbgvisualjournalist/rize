@@ -86,11 +86,34 @@ $(document).ready( function() {
         scrollWheelZoom: false
     });
 
+
     //Add the pins to the map.
     var myLayer = L.mapbox.featureLayer().addTo(map);
     myLayer.setGeoJSON(geojson);
 
 
+
+    function disableZoom(){
+        // Disable drag and zoom handlers.
+        map.dragging.disable();
+        map.touchZoom.disable();
+        map.doubleClickZoom.disable();
+        map.scrollWheelZoom.disable();
+
+        // Disable tap handler, if present.
+        if (map.tap) map.tap.disable();
+    }
+
+    function enableZoom(){
+        // Disable drag and zoom handlers.
+        map.dragging.enable();
+        map.touchZoom.enable();
+        map.doubleClickZoom.enable();
+        map.scrollWheelZoom.enable();
+
+        // Disable tap handler, if present.
+        if (map.tap) map.tap.enable();
+    }
 
 
     //Check the width of the browser.
@@ -100,11 +123,15 @@ $(document).ready( function() {
         if (w>550){
             //Fit the map to the markers.
             map.fitBounds(myLayer.getBounds());
+            enableZoom();
         }else if (w>450){
             //Center and zoom the map to west Africa.
             map.setView([8, -5], 4);
+            disableZoom()
+
         }else{
             map.setView([8, -5], 3);
+            disableZoom()
         }
     }
     centerMap();
