@@ -68,6 +68,7 @@
 	a#whatsapp{background: url(../images/social_whatsapp.png) center / 100%; vertical-align: top;}
 	a#youtube{background: url(../images/social_youtube.png) center / 100%; vertical-align: top;}
 	*/
+    #socialGray{display:none;}
 
     #followUs a .floatingText{display:none;}
     #followUs a .floatingText h3{color:#333; font-size: 1.1em;}
@@ -77,7 +78,7 @@
 	a#github{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 22%; vertical-align: top;}
 	a#instagram{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 33.5%; vertical-align: top;}
 	a#linkedin{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 44%; vertical-align: top;}
-	a#medium{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 55%; vertical-align: top;}
+	a#medium{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 55.5%; vertical-align: top; border:1px solid #CCC;}
 	a#soundcloud{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 66.5%; vertical-align: top;}
 	a#twitter{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 77.5%; vertical-align: top;}
 	a#whatsapp{background: url(../images/social.jpg) no-repeat 0px 0px / 100%; background-position: 0px 88.5%; vertical-align: top;}
@@ -92,22 +93,34 @@
     #footer{background-color: #000; color: #999; width:100%; margin: 0 auto; padding: 20px 0;}
     #footer p{padding: 0 5%;}
 
-    /*
-	@media only screen and (min-width: 500px) {
-		#staff.section{width: 90%; margin: 0 5%; padding: 35px 0 0 0;}
-		#staff .member .profile{padding:0;}
-		#staff .member .photo{width: 30%; margin: 0 4% 0 0;}
-
-		#staff .member{width: 48%; display: inline-block; margin: 0 1.5% 30px 0; padding: 0; vertical-align: top; border-bottom: none;}
-		#staff h3{margin-bottom:30px;}
-	}
-*/
     @media only screen and (min-width: 500px) {
         #footer {margin: 20px auto 0 auto; }
     }
 
     @media only screen and (min-width: 700px) {
 
+        #socialFullWidth{
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1026px;
+        }
+        #socialGray{
+            display: block;
+            position: absolute;
+            top:0;
+            right:0;
+        }
+        #socialGray a{display: inline-block; border-left: 1px dotted #CCCCCC; height: 71px;}
+        #socialGray a img{
+            width: 40px; height: auto; padding-top: 20px
+        }
+        #socialGray a:last-of-type{
+            border-right:1px solid #CCC;
+        }
         #staff.section{width: 90%; margin: 0 5%; padding: 35px 0 0 0;}
         #staff .member .profile{padding:0;}
         #staff .member .photo{width: 30%; margin: 0 4% 0 0;}

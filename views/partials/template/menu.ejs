@@ -9,6 +9,13 @@
 					<% } %>
 				</a></h1>
 		</div>
+
+		<div id='socialFullWidth'>
+			<div id="socialGray">
+					<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='' style=''><img src='images/social_gray_<%=socialData[i].platform %>.png'/></a><% } %><% } %>
+			</div>
+		</div>
+
 		<ul class='dropdownCategories right' id='dropdown'>
 			<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='' style=''><li><%=socialData[i].action %></li></a><% } %><% } %>
 
