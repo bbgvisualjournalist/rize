@@ -29,7 +29,7 @@
 	<div class="clearAll"></div>
 
 	<div id='followUs' class='section clearALl'>
-		<h3>Follow us</h3>
+		<h3>Connect with us</h3>
 		<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>' id='<%= socialData[i].platform %>' style='position: relative;'><img src='images/transparentSquare.png' class='square'/>				<div class="floatingText">
 				<h3 ><%=socialData[i].action %></h3>
 			</div>
@@ -94,6 +94,7 @@
 		}
 	];
 </script>
+<div class="clearAll"></div>
 
 <% include partials/template/footer.ejs %>
 <% include partials/template/scripts.ejs %>
