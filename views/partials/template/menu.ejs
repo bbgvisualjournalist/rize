@@ -12,7 +12,7 @@
 
 		<div id='socialFullWidth'>
 			<div id="socialGray">
-					<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>'  title='<%=socialData[i].action %>'><img src='images/social_gray_<%=socialData[i].platform %>.png'/></a><% } %><% } %>
+					<% for (var i=0; i<socialData.length; i++){%><%if (socialData[i].publish=='TRUE'){%><a href='<%= socialData[i].url %>'  title='<%=socialData[i].action %>'><img src='images/social_gray_<%=socialData[i].platform %>.png'/><div class='bottomBar'></div></a><% } %><% } %>
 			</div>
 		</div>
 
