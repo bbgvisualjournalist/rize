@@ -14,8 +14,10 @@
 		<source src="video/<%= data[0].video %>" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
-	<%} else {%>
+	<%} else if (data[0].youtube!=''){%>
 	<iframe id ='video' width="640" height="360" src="<%= data[0].youtube %>" frameborder="0" allowfullscreen></iframe>
+	<% } else {%>
+	<img src="images/fpo.jpg" alt="" style="width:100%; height: auto;"/>
 	<% } %>
 
 
@@ -52,7 +54,7 @@
 		<% for (var i=0; i<staffData.length; i++){%>
 		<div class='member'>
 			<div class='photo' style='background:#FFF url(images/mugshot_<%= staffData[i].twitter %>.jpg) center center; background-size: cover;'>
-				<img src='images/transparentSquare.png' class='square'/>
+				<a href='http://twitter.com/<%= staffData[i].twitter %>'><img src='images/transparentSquare.png' class='square'/></a>
 			</div>
 			<div class='profile'>
 				<h4><%= staffData[i].name %></h4>
