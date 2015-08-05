@@ -63,11 +63,12 @@ $(document).ready( function() {
 
     //Resize YouTube videos proportionately <---Moved outside for global scope
     function resizeIframes(){
-         var aspectRatio = $("iframe").width()/$("iframe").height();
-         var columnWidth = $("#centerWidth").width();
+        var aspectRatio = $("iframe").width()/$("iframe").height();
+        var columnWidth = $("#centerWidth").width();
 
-         $("iframe").width(columnWidth);
-         $("iframe").height(columnWidth/aspectRatio);
+        $("iframe").width(columnWidth);
+        $("iframe").height(columnWidth/aspectRatio);
+        $('#dropdown').hide();
     }
 
 
